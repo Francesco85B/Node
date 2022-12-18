@@ -38,7 +38,7 @@ export const updateScore = async (req, res) => {
     try {
         const score = await Score.update(req.body, {
             where: {
-                id: req.params.id
+                userId: req.params.userId
             }
         });
         res.json({
@@ -83,5 +83,6 @@ export const deleteScore = async (req, res) => {
     } catch (err) {
         console.log(err);
         res.sendStatus(500);
-    }
-}
+    }}
+
+    
